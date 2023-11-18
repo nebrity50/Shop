@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&family=Roboto+Condensed:wght@600&family=Tinos:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 400;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+            text-align: center;
+        }
+
+        #span {
+            display: inline-flex;
+            justify-content: flex-start;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .dollar {
+            margin-bottom: 10px;
+        }
+
+        #sp {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 40px;
+        }
+
+        img {
+            width: 110px;
+        }
+
+        #price {
+            position: relative;
+            top: 95px;
+            right: 25px;
+        }
+
+        #as1 {
+            pointer-events: none;
+            height: 5px;
+            width: 120px;
+            background: #664AFF;
+        }
+
+        #as1::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            width: 5px;
+            height: 5px;
+            background: red;
+            border-radius: 50%;
+            background: #664AFF;
+            border: 1px solid #664AFF;
+            cursor: pointer;
+        }
+        #as1::-moz-range-thumb{
+            /* -webkit-appearance: none; */
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            background: #664AFF;
+            border: 1px solid #664AFF;
+            cursor: pointer;
+        }
+
+        #as1::-moz-range-progress{
+            background: #664AFF;
+            /* this progress background is only shown on Firefox */
+        }
+
+
+        #as1::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Переопределить внешний вид по умолчанию */
+            appearance: none;
+            width: 5px; /* Установите определенную ширину обработчика ползунка */
+            height: 5px; /* Высота обработчика ползунка */
+            background: #4CAF50; /* Зеленый фон */
+            cursor: pointer; /* Курсор при наведении */
+        }
+
+        #btn {
+            border: none;
+        }
+
+        .btn1 {
+            transition: all 0.8s;
+        }
+
+        .btn1:hover {
+            box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0px 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn2 {
+            transition: all 0.8s;
+        }
+
+        .btn2:hover {
+            box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0px 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn3 {
+            transition: all 0.8s;
+        }
+
+        .btn3:hover {
+            box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0px 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+        }
+        .span1 {
+            position: relative;
+            right: 50px;
+        }
+
+        .span2 {
+            position: relative;
+            right: 20px;
+        }
+
+        a {
+            display: inline-flex;
+            justify-content: flex-start;
+            margin-left: 0px;
+            width: 145px;
+        }
+
+        #gift {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        #buy {
+            font-size: 23px;
+            font-weight: 500;
+            width: 280px;
+            height: 80px;
+            transition: all 500ms ease;
+            background: var(--tg-theme-button-text-color);
+            color: var(--tg-theme-button-color);
+        }
+
+        #buy:hover {
+            transform: scale(1.1);
+        }
+
+        #button {
+            font-size: 15px;
+        }
+
+        #zero:checked ~ .progress > .progress-bar {
+            width: 5%;
+            background-color: #f21111;
+        }
+
+        .progress {
+            margin: 0 auto;
+            margin-left: 3%;
+            width: 125px;
+            padding: 1px;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+        }
+
+        .progress-bar {
+            height: 2px;
+            border-radius: 4px;
+            background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+            background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+            background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+            -webkit-transition: 0.4s linear;
+            -moz-transition: 0.4s linear;
+            -o-transition: 0.4s linear;
+            transition: 0.4s linear;
+            -webkit-transition-property: width, background-color;
+            -moz-transition-property: width, background-color;
+            -o-transition-property: width, background-color;
+            transition-property: width, background-color;
+            -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Online Shop</h1>
+        <button id="button" class="euro"><b>€</b></button>
+        <button id="button" class="rubl"><b>₽</b></button>
+        <button id="button" class="hrivnya"><b>₴</b></button>
+        <button id="button" class="dollar"><b>$</b></button>
+        <!-- <a id="sp"><span id="span">Remaining: <span class="span1" type="number">1</span>*</span>
+        <span id="span">Remaining: <span class="span2" type="number">1</span>*</span>
+        <span id="span">Remaining: <span class="span3" type="number">1</span>*</span></a> -->
+        <div><input type="range" min="0" max="15" id="as1">
+            <input type="range" min="0" max="15" id="as2">
+            <input type="range" min="0" max="15" id="as3">
+            <input type="radio" class="radio" name="progress" value="zero" id="zero" checked>
+            <label for="zero" class="label half">5</label>
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div></div>
+        <a id="prize">
+            <button id="btn" class="btn1">
+            <img src="https://i.ibb.co/Q8WRgcB/12mes-removebg-preview-2.png"></button>
+            <span id="price" class="price12">$12</span>
+        </a>
+        <a id="prize">
+            <button id="btn" class="btn2">
+            <img src="https://i.ibb.co/KyKB7pW/6mes-removebg-preview.png"></button>
+            <span id="price" class="price6">$7</span>
+        </a>
+        <a id="prize">
+            <button id="btn" class="btn3">
+            <img src="https://i.ibb.co/V3Vc8Kv/3mes-removebg-preview.png"></button>
+            <span id="price" class="price3">$4</span>
+        </a>
+        <div id="gift">Gift codes*</div>
+        <button id="buy">Buy</button>
+    </main>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
